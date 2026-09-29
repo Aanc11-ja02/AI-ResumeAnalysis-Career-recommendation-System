@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Resume - AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            🧠 AI Resume Analyzer
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="upload.html" class="active">
+                📄 Upload Resume
+            </a>
+
+            <a href="resumes.html">
+                📁 My Resumes
+            </a>
+
+            <a href="recommendations.html">
+                💼 Career Recommendations
+            </a>
+
+            <a href="profile.html">
+                👤 Profile
+            </a>
+
+            <a href="index.html">
+                🚪 Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Upload Resume</h2>
+
+                <p>
+                    Let AI analyze your resume and discover suitable career paths.
+                </p>
+            </div>
+
+            <div class="user-area">
+
+                <span>Welcome, User</span>
+
+                <div class="avatar">
+                    👤
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+
+            <div class="upload-container">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h1>Upload Your Resume</h1>
+
+                <p class="upload-description">
+                    Upload your latest resume and our AI will analyze
+                    your skills, education and experience.
+                </p>
+
+
+                <!-- Upload Box -->
+
+                <label for="resumeFile" class="upload-box">
+
+                    <div class="cloud-icon">
+                        ☁️
+                    </div>
+
+                    <h3>
+                        Drag & Drop your resume here
+                    </h3>
+
+                    <p>
+                        or
+                    </p>
+
+                    <span class="browse-btn">
+                        Browse File
+                    </span>
+
+                    <small>
+                        Supported formats: PDF, DOC, DOCX
+                        <br>
+                        Maximum file size: 5 MB
+                    </small>
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="resumeFile"
+                    accept=".pdf,.doc,.docx"
+                    hidden
+                >
+
+
+                <!-- Selected File -->
+
+                <div id="filePreview" class="file-preview">
+
+                    <div class="file-info">
+
+                        <span class="file-icon">
+                            📄
+                        </span>
+
+                        <div>
+
+                            <strong id="fileName">
+                                No file selected
+                            </strong>
+
+                            <p id="fileSize"></p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        onclick="removeFile()"
+                        class="remove-btn">
+
+                        ✕
+
+                    </button>
+
+                </div>
+
+
+                <!-- Analyze Button -->
+
+                <button
+                    type="button"
+                    id="analyzeBtn"
+                    class="primary-btn analyze-btn"
+                    onclick="analyzeResume()">
+
+                    Analyze Resume →
+
+                </button>
+
+
+                <p class="privacy-note">
+                    🔒 Your resume will be securely processed for analysis.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../static/js/script.js"></script>
+
+</body>
+
+</html>
